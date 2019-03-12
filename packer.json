@@ -29,6 +29,18 @@
   }],
   "provisioners": [
     {
+      "type": "file",
+      "source": "./files/awscli.conf",
+      "destination": "~/awscli.conf",
+      "direction": "upload"
+    },
+    {
+      "type": "file",
+      "source": "./files/awslogs.conf",
+      "destination": "~/awslogs.conf",
+      "direction": "upload"
+    },
+    {
       "type": "shell",
       "script": "build.sh"
     }
